@@ -93,7 +93,6 @@ export default class Party {
             slidesToShow: '160px',
             gap: 30,
             drag: 'free-snap',
-            loop: true,
             onClick: current => this[`galleryphoto`].goTo(current)
         })
     }

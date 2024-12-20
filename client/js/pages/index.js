@@ -128,7 +128,6 @@ export default class Index {
             slidesToShow: '160px',
             gap: 30,
             drag: 'free-snap',
-            loop: true,
             // startIndex: this.galleryIndex || 0,
             onClick: current => this[`galleryphoto`].goTo(current)
         })
