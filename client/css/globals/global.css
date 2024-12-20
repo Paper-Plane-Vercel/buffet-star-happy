@@ -1,0 +1,115 @@
+:root {
+    --primary-color: #49AA9D;
+    --primary-color-rgb: 0, 61, 132;
+    --secondary-color: #f6f3dd;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('OpenSans Regular'), local('OpenSans-Regular'), url(../../font/OpenSans-Regular.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('OpenSans Bold'), local('OpenSans-Bold'), url(../../font/OpenSans-Bold.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'FuzzyBubbles';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('FuzzyBubbles Regular'), local('FuzzyBubbles-Regular'), url(../../font/FuzzyBubbles-Regular.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'FuzzyBubbles';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('FuzzyBubbles Bold'), local('FuzzyBubbles-Bold'), url(../../font/FuzzyBubbles-Bold.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Anton';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Anton'), local('Anton'), url(../../font/Anton.woff2) format('woff2');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    font-family: 'OpenSans', sans-serif;
+    font-size: 14px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+p {
+    margin: 0 0 20px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+hr {
+    border: 0;
+}
+
+::placeholder {
+    color: #333;
+    opacity: 1;
+    -webkit-transition: opacity .1s;
+    transition: opacity .1s;
+}
+
+:focus::placeholder {
+    opacity: 0;
+}
+
+* {
+    scrollbar-color: var(--primary-color) #F2F0EE;
+}
+
+body * {
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #F2F0EE;
+}
+
+body::-webkit-scrollbar {
+    width: initial;
+    scrollbar-color: var(--primary-color) #F2F0EE;
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:active {
+    background-color: var(--primary-color);
+}
+
+main {
+    padding-bottom: 160px;
+    flex: 1 0 0px;
+}
+
+[data-page="properties"] main {
+    display: flex;
+}

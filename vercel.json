@@ -1,0 +1,32 @@
+{
+	"version": 2,
+	"builds": [
+		{
+			"src": "app.js",
+			"use": "@vercel/node"
+		},
+		{
+			"src": "package.json",
+			"use": "@vercel/static-build",
+			"config": {
+				"distDir": "public"
+			}
+		}
+	],
+	"routes": [
+		{
+			"src": "/(.*)",
+			"dest": "app.js"
+		}
+	],
+	"crons": [
+		{
+			"path": "/server/cronjob/sitemap-dynamic.js?page=https://www.cerianicraveiro.com.br/imoveis/venda&type=cliente&id=14040&transaction=v",
+			"schedule": "1 0 * * *"
+		},
+		{
+			"path": "/server/cronjob/sitemap-dynamic.js?page=https://www.cerianicraveiro.com.br/imoveis/locacao&type=cliente&id=14040&transaction=l",
+			"schedule": "1 0 * * *"
+		}
+	]
+}

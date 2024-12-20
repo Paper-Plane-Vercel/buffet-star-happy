@@ -1,0 +1,27 @@
+const express = require('express')
+const compression = require('compression')
+const bodyParser = require('body-parser')
+const redirect = require('./server/middlewares/redirect')
+const routes = require('./server/routes/routes')
+const error = require('./server/middlewares/error')
+const { getImage } = require('./server/globals/get-image')
+const { getToken } = require('./server/globals/get-token')
+const { sendEmail } = require('./server/globals/forms')
+const path = require('path')
+
+const app = express()
+
+app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, 'server/views'))
+
+app.use(compression())
+app.use(bodyParser.json({ limit: '50mb' }))
+app.use(express.static(path.join(__dirname, 'public')))
+app.use(redirect)
+app.get('/proxy-image', getImage)
+app.get('/proxy-token', getToken)
+app.post('/send-email', sendEmail)
+app.use('/', routes)
+app.use(error)
+
+app.listen(8001)

@@ -1,0 +1,232 @@
+.header {
+    height: 90px;
+    font-family: 'FuzzyBubbles', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    background-color: #0B3733;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+    position: relative;
+    z-index: 9;
+}
+
+.header__logo img{
+    width: 290px;
+    height: auto;
+}
+
+.header__right {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.header__nav {
+    margin-right: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.header__link {
+    white-space: nowrap;
+    position: relative;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: #333;
+    padding: 0 30px;
+    background-color: #F8C847;
+}
+
+.header__link.is-active {
+    background-color: #C6D890;
+}
+
+.header__link::before,
+.header__link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.header__link::before {
+    top: -1px;
+    right: -1px;
+    border-width: 23px 10px 23px 0;
+    border-color: transparent #0B3733 transparent transparent;
+}
+
+.header__link::after {
+    top: -1px;
+    left: -1px;
+    border-width: 23px 0 23px 10px;
+    border-color: transparent transparent transparent #0B3733;
+}
+
+.header__home {
+    transform: rotate(4deg);
+    transition: transform 300ms;
+}
+
+.header__home:hover {
+    transform: rotate(-4deg);
+}
+
+.header__party {
+    transform: rotate(-3deg);
+    transition: transform 300ms;
+}
+
+.header__party:hover {
+    transform: rotate(3deg);
+}
+
+.header__franchise {
+    transform: rotate(2deg);
+    transition: transform 300ms;
+}
+
+.header__franchise:hover {
+    transform: rotate(-2deg);
+}
+
+.header__whatsapp,
+.header__mail {
+    color: #d2f95c;
+}
+
+.header__whatsapp-number,
+.header__mail-text {
+    display: block;
+    transform: rotate(2deg);
+}
+
+.header__whatsapp-icon,
+.header__mail-icon,
+.header__instagram-icon {
+    margin-right: 10px;
+}
+
+.header__menu-window {
+    padding: 15px 10px;
+    background-color: #0B3733;
+}
+
+.header__menu-content {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #0B3733;
+    background-image: url(../../svg/star-bg-pattern.svg);
+    background-repeat: repeat;
+    background-position: center;
+}
+
+@media screen and (max-width: 1340px) {
+    
+    .header__logo img{
+        width: 250px;
+        height: auto;
+    }
+
+    .header__nav {
+        margin-right: 15px;
+        gap: 10px;
+    }
+    
+}
+
+@media screen and (max-width: 1080px) {
+    
+    .header__nav,
+    .header__menu {
+        margin-top: 75px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header__nav {
+        margin: 0;
+    }
+
+    .header__menu-close {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 25px;
+    }
+
+    .header__home {
+        width: 190px;
+    }
+    
+    .header__party {
+        width: 200px;
+    }
+    
+    .header__franchise {
+        width: 220px;
+    }
+    
+    .header__whatsapp,
+    .header__mail {
+        display: flex;
+        align-items: center;
+    }
+
+    .header__instagram {
+        white-space: nowrap;
+        position: relative;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        color: #333;
+        padding: 0 30px;
+        background-color: #D2F95C;
+        display: flex;
+        align-items: center;
+        transform: rotate(2deg);
+    }
+    
+    .header__instagram::before,
+    .header__instagram::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+    }
+    
+    .header__instagram::before {
+        top: -1px;
+        right: -1px;
+        border-width: 23px 10px 23px 0;
+        border-color: transparent #0B3733 transparent transparent;
+    }
+    
+    .header__instagram::after {
+        top: -1px;
+        left: -1px;
+        border-width: 23px 0 23px 10px;
+        border-color: transparent transparent transparent #0B3733;
+    }
+
+}
+
+@media screen and (max-width: 567px) {
+    
+    .header__logo img{
+        width: 230px;
+        height: auto;
+        position: absolute;
+        top: -50px;
+        left: -20px;
+    }
+    
+}

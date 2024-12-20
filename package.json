@@ -1,0 +1,39 @@
+{
+	"name": "ceriani",
+	"version": "1.0.0",
+	"description": "Ceriani Craveiro",
+	"scripts": {
+		"start": "node --watch app.js",
+		"dev": "cross-env NODE_ENV=development concurrently \"npm start\" \"webpack serve --config webpack.dev.js\"",
+		"build": "cross-env NODE_ENV=production webpack --config webpack.prod.js"
+	},
+	"keywords": [],
+	"author": "Paper Plane Comunicação e Design®",
+	"homepage": "https://www.paperplane.com.br",
+	"license": "UNLICENSED",
+	"dependencies": {
+		"body-parser": "^1.20.2",
+		"ejs": "^3.1.10",
+		"express": "^4.19.2",
+		"multer": "^1.4.5-lts.1",
+		"node-cache": "^5.1.2",
+		"nodemailer": "^6.9.15",
+		"redis": "^4.7.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.25.2",
+		"@babel/preset-env": "^7.25.4",
+		"babel-loader": "^9.1.3",
+		"concurrently": "^9.0.1",
+		"copy-webpack-plugin": "^12.0.2",
+		"cross-env": "^7.0.3",
+		"css-loader": "^7.1.2",
+		"css-minimizer-webpack-plugin": "^7.0.0",
+		"mini-css-extract-plugin": "^2.9.1",
+		"terser-webpack-plugin": "^5.3.10",
+		"webpack": "^5.94.0",
+		"webpack-cli": "^5.1.4",
+		"webpack-dev-server": "^5.1.0",
+		"webpack-merge": "^6.0.1"
+	}
+}

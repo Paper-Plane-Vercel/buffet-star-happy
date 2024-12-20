@@ -1,0 +1,12 @@
+# system and generated files
+.DS_Store
+
+# directories
+node_modules/
+public/
+
+# files
+package-lock.json
+
+# env
+.env

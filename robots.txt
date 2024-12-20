@@ -1,0 +1,30 @@
+Sitemap: https://www.cerianicraveiro.com.br/sitemap.xml
+
+User-agent: *
+Allow: /
+Disallow: /imovel-impressao/
+Noindex: /imovel-impressao/
+Disallow: /favoritos/
+Noindex: /favoritos/
+Disallow: /sou-cliente-login/
+Noindex: /sou-cliente-login/
+Disallow: /sou-cliente-alterar-senha/
+Noindex: /sou-cliente-alterar-senha/
+Disallow: /sou-cliente-proprietario/
+Noindex: /sou-cliente-proprietario/
+Disallow: /sou-cliente-proprietario-extrato/
+Noindex: /sou-cliente-proprietario-extrato/
+Disallow: /sou-cliente-boletos/
+Noindex: /sou-cliente-boletos/
+Disallow: /sou-cliente-extratos/
+Noindex: /sou-cliente-extratos/
+Disallow: /sou-cliente-inicio/
+Noindex: /sou-cliente-inicio/
+Disallow: /sou-cliente-ir/
+Noindex: /sou-cliente-ir/
+Disallow: /sou-cliente-meus-tickets/
+Noindex: /sou-cliente-meus-tickets/
+Disallow: /sou-cliente-tickets/
+Noindex: /sou-cliente-tickets/
+
+# End of robots.txt file

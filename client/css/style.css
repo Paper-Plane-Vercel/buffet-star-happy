@@ -1,0 +1,14 @@
+@import 'components/jet-1.0.0.min';
+
+@import 'globals/global';
+@import 'globals/preloader';
+@import 'globals/animation';
+
+@import 'includes/header';
+@import 'includes/main';
+@import 'includes/footer';
+
+@import 'pages/index';
+@import 'pages/franchise';
+@import 'pages/party';
+@import 'pages/404';

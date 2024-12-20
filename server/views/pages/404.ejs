@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <%- include('../includes/head') %>
+    <body data-page="<%= fileName %>">
+        <%- include('../includes/header') %>
+        <main>
+            <section class="not-found">
+                <div class="jetgrid jetgrid--container" data-animate="slide-left">
+                    <div class="jetgrid__col--24">
+                        <h1 class="breadcrumb__title">Página não <strong class="breadcrumb-red">encontrada</strong></h1>
+                        <div class="breadcrumb-border"></div>
+                        <div class="breadcrumb__line"></div>
+                    </div>
+                </div>
+                <div class="jetgrid jetgrid--container jetflex--justify-content-center">
+                    <div class="not-found__content jetgrid__col--13 jetgrid__col--md-16 jetgrid__col--sm-20 jetgrid__col--xs-24" data-animate="slide-top">
+                        <img class="not-found__img" src="/404.svg" loading="lazy" alt="Erro 404" title="Página não encontrada" width="336.83" height="208.67">
+                        <h1 class="not-found__title">A página que você esta tentando acessar não foi encontrada</h1>
+                        <p class="not-found__text">Ocorreu um erro e infelizmente não conseguimos encontrar essa página.<br>Tente atualizar a página ou <a class="not-found__link"  href="/contato">entre em contato</a> para reportar o erro. Obrigado.</p>
+                    </div>
+                </div>
+            </section>
+            <%- include('../includes/main') %>
+        </main>
+        <%- include('../includes/footer') %>
+    </body>
+</html>

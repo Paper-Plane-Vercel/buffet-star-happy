@@ -1,0 +1,44 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="author" content="Paper Plane Design e Comunicação®">
+
+    <title><%= seo.title %></title>
+    <meta name="description" content="<%= seo.description %>">
+    <meta name="keywords" content="<%= seo.keywords %>">
+    <meta name="robots" content="<%= seo.url.includes('hangar') ? 'noindex, nofollow' : seo.robots %>">
+
+    <meta itemprop="name" content="<%= seo.name %>">
+    <meta itemprop="description" content="<%= seo.description %>">
+    <meta itemprop="image" content="<%= seo.image %>">
+
+    <meta name="og:type" content="website">
+    <meta name="og:title" content="<%= seo.title %>">
+    <meta name="og:description" content="<%= seo.description %>">
+    <meta name="og:image" content="<%= seo.image %>">
+    <meta name="og:url" content="<%= seo.url %>">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<%= seo.title %>">
+    <meta name="twitter:description" content="<%= seo.description %>">
+    <meta name="twitter:image" content="<%= seo.image %>">
+    <meta name="twitter:url" content="<%= seo.url %>">
+
+    <meta name="apple-mobile-web-app-title" content="<%= customer.nomeFantasia %>">
+    <meta name="theme-color" content="#49AA9D">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="preload" as="font" type="font/woff2" href="/Fuzzy-Bubbles-Regular.woff2">
+    <link rel="preload" as="font" type="font/woff2" href="/Fuzzy-Bubbles-Bold.woff2">
+    <link rel="preload" as="font" type="font/woff2" href="/Anton.woff2">
+
+    <link rel="stylesheet" href="/style.css<%= process.env.GITHUB_SHA ? `?v=${process.env.GITHUB_SHA}` : '' %>">
+    <script src="/app.js<%= process.env.GITHUB_SHA ? `?v=${process.env.GITHUB_SHA}` : '' %>"></script>
+
+    <link rel="canonical" href="<%= seo.url %>">
+</head>
