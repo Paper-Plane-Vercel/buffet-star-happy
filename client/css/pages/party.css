@@ -393,10 +393,13 @@
 
 .expand .party-decorations__gallery {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     position: fixed;
-    top: 0;
+    top: 0px;
     left: 0;
     background-color: var(--secondary-color);
     background-image: url(../../svg/star-banner-pattern.svg);
@@ -406,46 +409,61 @@
 }
 
 .party-decorations__gallery-box {
-    width: 100%;
-    position: relative;
+    width: calc(100% - 170px);
+    max-width: 1200px;
+    height: 100%;
     display: flex;
-    align-items: center;
-    gap: 30px;
+    align-items: end;
+    position: relative;
 }
 
 .party-decorations__gallery-close {
     position: absolute;
     top: 20px;
     right: 20px;
+    z-index: 3;
+}
+
+.party-decorations__gallery-container {
+    display: flex;
+    align-items: center;
+}
+
+.party-decorations__gallery-img-container {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .party-decorations__gallery-slider {
     width: 100%;
-}
-
-.party-decorations__gallery-img-container {
-    width: 100%;
-    height: 715px;
-    border: 10px solid #fff;
-    overflow: hidden;
-    position: relative;
+    height: auto;
 }
 
 .party-decorations__gallery-img {
     width: 100%;
     height: 100%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
+    max-height: calc(100vh - 345px);
+    border: 10px solid #fff;
+    overflow: hidden;
 }
 
-.party-decorations__gallery-bottom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px 0 25px;
+.party-decorations__gallery-previous,
+.party-decorations__gallery-next {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.party-decorations__gallery-previous {
+    left: calc(50% - 500px);
+    transform: translate(-50%, -50%);
+}
+
+.party-decorations__gallery-next {
+    right: calc(50% - 530px);
+    transform: translate(-50%, -50%);
 }
 
 .party-decorations__gallery-counter {
@@ -459,10 +477,10 @@
     height: 45px;
     line-height: 45px;
     text-align: center;
-    margin: 0 30px;
+    margin: 20px 30px;
     padding: 0 30px;
     background-color: #DB3B77;
-    transform: rotate(-2deg);    
+    transform: rotate(-2deg);       
 }
 
 .party-decorations__gallery-counter::before,
@@ -488,10 +506,6 @@
     border-color: transparent transparent transparent var(--secondary-color);
 }
 
-.party-decorations__thumb-container {
-    max-width: 100%;
-}
-
 .party-decorations__thumb-box {
     width: 100%;
     height: 155px;
@@ -499,8 +513,6 @@
     padding: 15px 30px;
     display: flex;
     gap: 40px;
-    position: fixed;
-    bottom: 0;
 }
 
 .party-decorations__thumb-slide {
@@ -942,18 +954,41 @@
         height: 144px;
     }
 
-    .party-decorations__gallery-img-container {
-        border-left: none;
-        border-right: none;
+    .expand .party-decorations__gallery {
+        justify-content: center;
+        gap: 50px;
+    }
+    
+    .party-decorations__gallery-box {
+        width: 100%;
+    }
+    
+    .party-decorations__gallery-img {
+        width: 100%;
+    }
+
+    .party-decorations__gallery-box {
+        margin-top: 100px;
+        height: auto;
     }
 
     .party-decorations__gallery-close {
+        top: 20px;
         right: 50%;
         transform: translate(50%);
     }
 
-    .party-decorations__gallery-bottom {
-        margin: 50px 0 80px;
+    .party-decorations__gallery-previous,
+    .party-decorations__gallery-next {
+        top: calc(100% + 90px);
+    }
+
+    .party-decorations__gallery-previous {
+        left: calc(50% - 120px);
+    }
+    
+    .party-decorations__gallery-next {
+        right: calc(50% - 150px);
     }
 
 }
